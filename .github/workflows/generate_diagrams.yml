@@ -73,4 +73,4 @@ jobs:
         commit-message: "Update generated diagrams"
         push-branch: ${{ github.head_ref }}
         force-add: 'true'
-        files: output/
+        files: output/*
