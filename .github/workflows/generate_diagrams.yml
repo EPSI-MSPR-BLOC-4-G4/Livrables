@@ -51,9 +51,18 @@ jobs:
         done
 
     # run python3 diagram/diagrams/global_user_diagram.py
-
     - name: Global User Diagram
       run: python3 diagram/diagrams/global_user_diagram.py
+
+    - name: List output directory
+      run: |
+        echo "Listing contents of diagram/output/ directory..."
+        ls -R diagram/output/
+
+    - name: List current directory
+      run: |
+        echo "Listing contents of the current directory..."
+        ls -R
 
     - name: Upload diagrams
       uses: actions/upload-artifact@v4
