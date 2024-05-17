@@ -51,8 +51,8 @@ jobs:
         done
 
     # run python3 diagram/diagrams/global_user_diagram.py
-    - name: Global User Diagram
-      run: python3 diagram/diagrams/global_user_diagram.py
+    # - name: Global User Diagram
+    #   run: python3 diagram/diagrams/global_user_diagram.py
 
     - name: List output directory
       run: |
