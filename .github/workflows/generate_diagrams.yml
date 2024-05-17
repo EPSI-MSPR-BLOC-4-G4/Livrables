@@ -67,7 +67,7 @@ jobs:
         path: ./output/
 
     - name: Commit and push diagrams
-      uses: github-actions-x/commit@v3
+      uses: github-actions-x/commit@master
       with:
         commit-message: "Update generated diagrams"
         branch: ${{ github.head_ref }}
