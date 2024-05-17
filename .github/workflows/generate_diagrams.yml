@@ -71,7 +71,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "Update generated diagrams"
-        branch: ${{ github.head_ref }}
+        push-branch: ${{ github.head_ref }}
         force-add: 'true'
         files: |
           ./output/
