@@ -14,15 +14,15 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@latest
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@latest
       with:
         python-version: '3.x'
 
     - name: Cache pip dependencies
-      uses: actions/cache@v2
+      uses: actions/cache@latest
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
@@ -34,7 +34,7 @@ jobs:
 
     - name: Cache Graphviz
       id: cache-graphviz
-      uses: actions/cache@v2
+      uses: actions/cache@latest
       with:
         path: /usr/local/bin/dot
         key: ${{ runner.os }}-graphviz
@@ -51,7 +51,7 @@ jobs:
         done
 
     - name: Upload diagrams
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@latest
       with:
         name: diagrams
-        path: output/
+        path: output_folder/
