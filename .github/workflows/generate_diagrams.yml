@@ -66,10 +66,10 @@ jobs:
         name: diagrams
         path: ./output/
 
-    - name: Commit and push diagrams
-      uses: github-actions-x/commit@master
-      with:
-        commit-message: "Update generated diagrams"
-        branch: ${{ github.head_ref }}
-        files: |
-          ./output/
+    - name: Commit back to GitHub
+      run: |
+        git config --global user.name "github-actiuons[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add -A
+        git commit -m "generated diagrams"
+        git push
