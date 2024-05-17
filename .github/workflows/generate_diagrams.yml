@@ -64,7 +64,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: diagrams
-        path: ./output/
+        path: output/*
 
     - name: Commit and push diagrams
       uses: github-actions-x/commit@v2.9
